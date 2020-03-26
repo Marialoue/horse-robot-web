@@ -131,7 +131,7 @@ li a:hover{
 }
 
 .dateTime,.distance, .steps, .sound, .horsepower, .gas{
-    padding-bottom:0.7rem;
+    padding-bottom:0.5rem;
 }
 
 .footer{

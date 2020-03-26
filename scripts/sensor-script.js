@@ -25,7 +25,7 @@ function addMenu() {
 
     var links = [
         ["Home", "/horse-robot-web/index.html"],
-        ["Sensors", "/horse-robot-web/sensors.html"],
+        ["Sensors", "/horse-robot-web/sensors.html"], // should be changed to "parts" or something simliar?
         ["Circut", "/horse-robot-web/circut.html"],
         ["The process", "/horse-robot-web/process.html"]
     ];
@@ -51,7 +51,7 @@ function addMain() {
     var leftDiv = document.createElement("div");
     leftDiv.className = "left-div";
     var textParagraphUpper = document.createElement("p");
-    var leftText = document.createTextNode("We used a lot of parts (not including all of the glue needed to assembly this rocket) for our Cloudia. ");
+    var leftText = document.createTextNode("We used a lot of parts, and a whole lot of glue to assembly our Cloudia. Listed below is everything we used.");
     textParagraphUpper.appendChild(leftText); // add textNode "leftText" to textParagraph
 
     var textParagraphLower = document.createElement("p");
