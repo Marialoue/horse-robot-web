@@ -63,13 +63,36 @@ function addMain() {
     textParagraphSensors.className = "textParagraphSensors";
 
     
-    // variables to get data from node
-    var dateTime = document.createElement("p");
-    dateTime.id = "dateTime";
+    // variables to get date and time data from getDateTime function
     var dateTimeText = document.createTextNode("DATE & TIME:");
     textParagraphSensors.appendChild(dateTimeText);
-    // textParagraphSensors.appendChild(dateTime);
 
+    var dateTime = document.createElement("p"); 
+    dateTime.className = "dateTime";
+    textParagraphSensors.appendChild(dateTime);
+
+    var year = document.createElement("span");
+    year.id = "year";
+    dateTime.appendChild(year);
+
+    var month = document.createElement("span");
+    month.id = "month";
+    dateTime.appendChild(month);
+
+    var day = document.createElement("span");
+    day.id = "day";
+    dateTime.appendChild(day);
+
+    var hour = document.createElement("span");
+    hour.id = "hour";
+    dateTime.appendChild(hour);
+
+    var minute = document.createElement("span");
+    minute.id = "minute";
+    dateTime.appendChild(minute);
+
+
+    // variables to get all other sensor data from getDataFromNode function
     var distance = document.createElement("p");
     distance.id = "distance";
     var distanceText = document.createTextNode("DISTANCE:");
@@ -100,7 +123,7 @@ function addMain() {
     textParagraphSensors.appendChild(gasText);
     textParagraphSensors.appendChild(gas);
 
-
+    // adding leftDiv to main
     leftDiv.appendChild(textParagraphUpper);
     leftDiv.appendChild(br);
     leftDiv.appendChild(textParagraphLower);
@@ -115,32 +138,27 @@ function addMain() {
     rightImage.src = "https://marialoue.github.io/horse-robot-web/images/index_img.png";
     rightImage.width = 500;
 
+    // adding rightDiv to main
     rightDiv.appendChild(rightImage);
     main.appendChild(rightDiv);
 }
 
-function getDateTime(year, month, day, hour, minut) {
-    console.log("function getDateTime is running ..."); // making sure the function runs
-    document.getElementById("year").innerHTML = year;
-    document.createTextNode("-");
-    document.getElementById("month").innerHTML = month;
-    document.createTextNode("-");
-    document.getElementById("day").innerHTML = day;
-    document.createTextNode(" ");
-    document.getElementById("hour").innerHTML = hour;
-    document.createTextNode(":");
-    document.getElementById("minut").innerHTML = minut;
+function getDateTime(year, month, day, hour, minute) {
+    console.log("function getDateTime is running ..."); // console log to test function is running
+    document.getElementById("year").innerHTML = year + "-";
+    document.getElementById("month").innerHTML = month + "-";
+    document.getElementById("day").innerHTML = day + " ";
+    document.getElementById("hour").innerHTML = hour + ":";
+    document.getElementById("minute").innerHTML = minute;
 }
 
-function getDataFromNode(dateTime, distance, steps, sound, horsepower, gas){
-    console.log("function getDataFromNode is running ..."); // making sure the function runs
-    document.getElementById("dateTime").innerHTML = dateTime;
+function getDataFromNode(distance, steps, sound, horsepower, gas){
+    console.log("function getDataFromNode is running ..."); // console log to test function is running
     document.getElementById("distance").innerHTML = distance;
     document.getElementById("steps").innerHTML = steps;
     document.getElementById("sound").innerHTML = sound;
     document.getElementById("horsepower").innerHTML = horsepower;
     document.getElementById("gas").innerHTML = gas;
-    console.log("function getDataFromNode has finished");
 }
 
 function addFooter() {
@@ -155,5 +173,6 @@ function addFooter() {
 addHeader();
 addMenu();
 addMain();
+getDateTime();
 getDataFromNode();
 addFooter();

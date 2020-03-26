@@ -23,7 +23,6 @@ h1{
 p{
     margin: 0;
     width: auto;
-
 }
 
 li, li a{
@@ -111,18 +110,12 @@ li a:hover{
     float: left;
 }
 
-/* li with sensor vaulues - differ from menu li */
+
 .textParagraphSensors{
     width: auto;
     font-weight: lighter;
     letter-spacing: 0.1rem; 
     float: unset;
-}
-
-/* p with sensor vaules - differ from menu li */
-.sensorValue{
-    margin-top: 1rem;
-
 }
 
 .footer{
