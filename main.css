@@ -1,3 +1,4 @@
+/* ROOT AND TAG PROPERTIES */
 :root{
     font-size: 62.5%;
     background-color: white;
@@ -44,6 +45,7 @@ li a:hover{
     cursor: pointer;
 } 
 
+/* CLASSNAME PROPERTIES */
 .header{
     background-color:  rgba(153, 125, 107, 0.89);
     color:rgba(255, 255, 255, 0.95);
@@ -64,6 +66,18 @@ li a:hover{
     margin-top: 0rem;
 }
 
+/* main div including everything exept header and footer */
+.main{
+    width: auto;
+    height: 65vh;
+    background-color: rgba(153, 125, 107, 0.322);
+    letter-spacing: 0.15rem;
+    padding: 2rem;
+    margin-top: 4rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-bottom: auto;
+}
 /* menu div */
 .menu{  
     width: auto;
@@ -85,19 +99,6 @@ li a:hover{
     border: none;
 }
 
-/* main div including everything exept header and footer */
-.main{
-    width: auto;
-    height: 60vh;
-    background-color: rgba(153, 125, 107, 0.322);
-    letter-spacing: 0.15rem;
-    padding: 2rem;
-    margin-top: 4rem;
-    margin-right: 2rem;
-    margin-left: 2rem;
-    margin-bottom: auto;
-}
-
 .right-div{
     width: 48%;
     height: 100%;
@@ -110,7 +111,6 @@ li a:hover{
     float: left;
 }
 
-
 .textParagraphSensors{
     width: auto;
     font-weight: lighter;
@@ -118,10 +118,15 @@ li a:hover{
     float: unset;
 }
 
+.dateTime,.distance, .steps, .sound, .horsepower, .gas{
+    padding-bottom:0.7rem;
+}
+
 .footer{
     clear: both; 
     height: 5vh; 
     font-size: 1.2rem; 
+    font-weight: lighter;
     color:rgba(63, 63, 63, 0.863);
     background-color: rgba(153, 125, 107, 0.322);
     margin-top: 2rem;

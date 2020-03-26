@@ -56,7 +56,7 @@ function addMain() {
     textParagraphUpper.appendChild(leftText);
 
     var textParagraphLower = document.createElement("p"); 
-    var leftTextValues = document.createTextNode("Here we will show the latest sensor values that Cloudia sends us : ");
+    var leftTextValues = document.createTextNode("Here we will show the latest sensor values that Cloudia sends us: ");
     textParagraphLower.appendChild(leftTextValues);
 
     var textParagraphSensors = document.createElement("p"); // paragraph for sensor values, makes it easier to format in the css file
@@ -95,30 +95,35 @@ function addMain() {
     // variables to get all other sensor data from getDataFromNode function
     var distance = document.createElement("p");
     distance.id = "distance";
+    distance.className = "distance";
     var distanceText = document.createTextNode("DISTANCE:");
     textParagraphSensors.appendChild(distanceText);
     textParagraphSensors.appendChild(distance);
 
     var steps = document.createElement("p");
     steps.id = "steps";
+    steps.className ="steps";
     var stepsText = document.createTextNode("STEPS:");
     textParagraphSensors.appendChild(stepsText);
     textParagraphSensors.appendChild(steps);
 
     var sound = document.createElement("p");
     sound.id = "sound";
+    sound.className = "sound";
     var soundText = document.createTextNode("SOUND: ");
     textParagraphSensors.appendChild(soundText);
     textParagraphSensors.appendChild(sound);
 
     var horsepower = document.createElement("p");
     horsepower.id = "horsepower";
+    horsepower.className ="horsepower";
     var horsepowerText = document.createTextNode("HORSEPOWER: ");
     textParagraphSensors.appendChild(horsepowerText);
     textParagraphSensors.appendChild(horsepower);
 
     var gas = document.createElement("p");
     gas.id = "gas";
+    gas.className = "gas";
     var gasText = document.createTextNode("GAS: ");
     textParagraphSensors.appendChild(gasText);
     textParagraphSensors.appendChild(gas);
