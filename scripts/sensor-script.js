@@ -1,4 +1,4 @@
-console.log("Hello world from web script")
+console.log("Hello world from web script") // console log to test script is running
 
 function addHeader() {
     var header = document.createElement("div");
@@ -40,21 +40,54 @@ function addMenu() {
 }
 
 function addMain() {
+    // line break
+    var br = document.createElement("br");
+
     var main = document.createElement("div");
     main.className = "main"; // assign name for css file
     document.body.appendChild(main); // add div to body
 
-    // add function for scalable sensor picture with sensor data
-
-    // paragraph with text
+    // div with text
     var leftDiv = document.createElement("div");
     leftDiv.className = "left-div";
-    var textParagraph = document.createElement("p"); // creates a paragraph so that all text throughout all pages can be adjusted in one setting
-    var leftText = document.createTextNode("We used a lot of parts (not including all of the glue needed to assembly this rocket) for our Cloudia. There are four 180° servos, one ultrasonic sensor, two big sound sensors and one gas sensor that detacted combustible, flammable and toxic gases, and oxygen depletion. We also used one Arduino Uno and one Node MCU. ");
+    var textParagraphUpper = document.createElement("p");
+    var leftText = document.createTextNode("We used a lot of parts (not including all of the glue needed to assembly this rocket) for our Cloudia. ");
+    textParagraphUpper.appendChild(leftText); // add textNode "leftText" to textParagraph
 
-    textParagraph.appendChild(leftText); // add textNode "leftText" to textParagraph
-    leftDiv.appendChild(textParagraph); // add p "textParagraph" to leftDiv
-    main.appendChild(leftDiv); // add leftDiv to main div
+    var textParagraphLower = document.createElement("p");
+    textParagraphLower.className = "textParagraphLower";
+    var leftTextValues = document.createTextNode("Parts and tools: "); //1 Arduino Uno, 1 NodeMCU, 1 Ultrasonic Distance Sensor HC-SR04, 1 MQ2-GasSensor, 2 Sound Detection Sensor, 1 prototypeboard for Arduino Uno, 4 MicroServo 9g SG9 180°, 2 mini breadboards (170), 1 9V-battery, generic jumperwires, DC Jack barrel, more-than-you-think hotglue and bamboo barbeque skewers (to connect the joints). Tools: 1 Gluegun small, Dremel (small drill).
+    textParagraphLower.appendChild(leftTextValues);
+
+
+    var parts = [
+        ["1x Arduino Uno"],
+        ["1x NodeMCU"],
+        ["1x Prototypeboard for Arduino Uno"],
+        ["1x Ultrasonic Distance Sensor HC-SR04"],
+        ["1x MQ2-Gas Sensor"],
+        ["2x Sound Detection Sensor"],
+        ["4x MicroServo 9g SG9"],
+        ["2x Mini Breadboards (170 pins)"],
+        ["1x 9V battery"],
+        ["Generic jumperwires"],
+        ["DC Jack barrel"],
+        ["Hotglue x more than you'd think"],
+        ["Bamboo barbeque skewers (to connect the joints)"],
+        ["1x Gluegun small"],
+        ["1x Dremel (small drill)"]
+    ]
+
+    for (var i = 0; i < parts.length; i++) {
+        var listParts = document.createElement("li");
+        listParts.appendChild(document.createTextNode(parts[i]));
+        textParagraphLower.appendChild(listParts);
+    }
+
+    leftDiv.appendChild(textParagraphUpper);
+    leftDiv.appendChild(br);
+    leftDiv.appendChild(textParagraphLower);
+    main.appendChild(leftDiv);
 
     // div with picture
     var rightDiv = document.createElement("div");
@@ -62,11 +95,10 @@ function addMain() {
 
     var rightImage = document.createElement("img");
     rightImage.src = "https://marialoue.github.io/horse-robot-web/images/sensors_img.png";
-    rightImage.width = 500;
+    rightImage.width = 550;
 
-    rightDiv.appendChild(rightImage); 
+    rightDiv.appendChild(rightImage);
     main.appendChild(rightDiv);
-
 }
 
 function addFooter() {

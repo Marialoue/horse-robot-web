@@ -60,7 +60,8 @@ function addMain(){
 
     var rightImage = document.createElement("img");
     rightImage.src = "https://marialoue.github.io/horse-robot-web/images/Cloudia connections_bb.png";
-    rightImage.width = 450;
+    rightImage.height = 280;
+
 
     rightDiv.appendChild(rightImage);
     main.appendChild(rightDiv);

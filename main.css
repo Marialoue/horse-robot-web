@@ -26,7 +26,8 @@ p{
     width: auto;
 }
 
-li, li a{
+.linkContent
+    li, li a{
     color:  rgba(153, 125, 107, 0.89);
     list-style-type: none;
     display: block;
@@ -73,11 +74,12 @@ li a:hover{
     background-color: rgba(153, 125, 107, 0.322);
     letter-spacing: 0.15rem;
     padding: 2rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-right: 2rem;
     margin-left: 2rem;
     margin-bottom: auto;
 }
+
 /* menu div */
 .menu{  
     width: auto;
@@ -111,11 +113,21 @@ li a:hover{
     float: left;
 }
 
+/*  */
 .textParagraphSensors{
     width: auto;
     font-weight: lighter;
     letter-spacing: 0.1rem; 
     float: unset;
+}
+
+/* list for parts */
+.textParagraphLower
+    li{
+    color:  rgb(153, 125, 107);
+    list-style-type: none;
+    text-decoration: none;
+    font-weight: 1rem;
 }
 
 .dateTime,.distance, .steps, .sound, .horsepower, .gas{
