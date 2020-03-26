@@ -130,7 +130,7 @@ function addMain() {
 
     var safetyLevel = document.createElement("p");
     safetyLevel.id = "safetyBox";
-    var safetyLevelText = document.createTextNode("SafetyLevel: ");
+    var safetyLevelText = document.createTextNode("SAFETY LEVEL: ");
     var safetyVar = document.createTextNode("Good");
     safetyVar.id = "safetyVar";
     safetyVar.className = "safetyVar";
@@ -169,7 +169,7 @@ function getDateTime(year, month, day, hour, minute) {
 
 function getDataFromNode(safetyvar, distance, steps, sound, horsepower, gas){
     console.log("function getDataFromNode is running ..."); // making sure the function runs
-    document.getElementById("safetyVar").innerHTML = safetyVar;
+    document.getElementById("safetyVar").innerHTML = safetyvar;
     document.getElementById("distance").innerHTML = distance;
     document.getElementById("steps").innerHTML = steps;
     document.getElementById("sound").innerHTML = sound;
