@@ -55,19 +55,19 @@ function addMain() {
     var leftText = document.createTextNode("Welcome. We've been expecting you. We, the people behind this work of art, Evy Svensson & Maria Karlsson, are studying System Development - Internet of Things at Stockholm Institute of Technology, and this site is a result of what we've learned in the course Embedded systems. We wanted to make a functioning horse robot, let's see how we did (our horse is named Cloudia since she is connected in a fog computing network). ");
     textParagraphUpper.appendChild(leftText);
 
-    var textParagraphLower = document.createElement("p"); 
+    var textParagraphLower = document.createElement("p");
     var leftTextValues = document.createTextNode("Here we will show the latest sensor values that Cloudia sends us: ");
     textParagraphLower.appendChild(leftTextValues);
 
     var textParagraphSensors = document.createElement("p"); // paragraph for sensor values, makes it easier to format in the css file
     textParagraphSensors.className = "textParagraphSensors";
 
-    
+
     // variables to get date and time data from getDateTime function
     var dateTimeText = document.createTextNode("DATE & TIME:");
     textParagraphSensors.appendChild(dateTimeText);
 
-    var dateTime = document.createElement("p"); 
+    var dateTime = document.createElement("p");
     dateTime.className = "dateTime";
     textParagraphSensors.appendChild(dateTime);
 
@@ -102,7 +102,7 @@ function addMain() {
 
     var steps = document.createElement("p");
     steps.id = "steps";
-    steps.className ="steps";
+    steps.className = "steps";
     var stepsText = document.createTextNode("STEPS:");
     textParagraphSensors.appendChild(stepsText);
     textParagraphSensors.appendChild(steps);
@@ -116,7 +116,7 @@ function addMain() {
 
     var horsepower = document.createElement("p");
     horsepower.id = "horsepower";
-    horsepower.className ="horsepower";
+    horsepower.className = "horsepower";
     var horsepowerText = document.createTextNode("HORSEPOWER: ");
     textParagraphSensors.appendChild(horsepowerText);
     textParagraphSensors.appendChild(horsepower);
@@ -128,13 +128,13 @@ function addMain() {
     textParagraphSensors.appendChild(gasText);
     textParagraphSensors.appendChild(gas);
 
+    /* This is our aggregated data combining data from distance and gas. The thresholds 
+    for these variables is 20 cm and 300 ppm respectivly, and depending on what data we 
+    get from Cloudia, there will be diferent outcomes. */
     var safetyLevel = document.createElement("p");
-    safetyLevel.id = "safetyBox";
+    safetyLevel.id = "safetyLevel";
+    safetyLevel.className ="safetyLevel";
     var safetyLevelText = document.createTextNode("SAFETY LEVEL: ");
-    var safetyVar = document.createTextNode("Good");
-    safetyVar.id = "safetyVar";
-    safetyVar.className = "safetyVar";
-    safetyLevel.appendChild(safetyVar);
     textParagraphSensors.appendChild(safetyLevelText);
     textParagraphSensors.appendChild(safetyLevel);
 
@@ -167,14 +167,14 @@ function getDateTime(year, month, day, hour, minute) {
     document.getElementById("minute").innerHTML = minute;
 }
 
-function getDataFromNode(safetyvar, distance, steps, sound, horsepower, gas){
+function getDataFromNode(safetyLevel, distance, steps, sound, horsepower, gas) {
     console.log("function getDataFromNode is running ..."); // making sure the function runs
-    document.getElementById("safetyVar").innerHTML = safetyvar;
     document.getElementById("distance").innerHTML = distance;
     document.getElementById("steps").innerHTML = steps;
     document.getElementById("sound").innerHTML = sound;
     document.getElementById("horsepower").innerHTML = horsepower;
     document.getElementById("gas").innerHTML = gas;
+    document.getElementById("safetyLevel").innerHTML = safetyLevel; // aggregated data
 }
 
 function addFooter() {

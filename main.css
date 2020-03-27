@@ -70,7 +70,7 @@ li a:hover{
 /* main div including everything exept header and footer */
 .main{
     width: auto;
-    height: 65vh;
+    height: 66vh;
     background-color: rgba(153, 125, 107, 0.322);
     letter-spacing: 0.15rem;
     padding: 2rem;
@@ -130,8 +130,8 @@ li a:hover{
     font-weight: 1rem;
 }
 
-.dateTime,.distance, .steps, .sound, .horsepower, .gas{
-    padding-bottom:0.5rem;
+.dateTime,.distance, .steps, .sound, .horsepower, .gas, .safetyLevel{
+    padding-bottom:0.1rem;
 }
 
 .footer{
